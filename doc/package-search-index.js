@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.aluracursos.comprastarjeta.menu"},{"l":"com.aluracursos.comprastarjeta.modelos"},{"l":"com.aluracursos.comprastarjeta.principal"}];updateSearchResults();
