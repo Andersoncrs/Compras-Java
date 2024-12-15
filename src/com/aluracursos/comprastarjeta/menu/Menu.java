@@ -150,7 +150,7 @@ public class Menu {
     /**
      * Limpia el buffer del Scanner para evitar errores de entrada.
      */
-    public void limpiarBufferScanner() {
+    private void limpiarBufferScanner() {
         if (input.hasNextLine()) {
             input.nextLine();
         }
