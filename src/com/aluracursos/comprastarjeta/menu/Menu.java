@@ -1,3 +1,8 @@
+/**
+ * Clase que maneja la interacción con el usuario a través del menú.
+ * Permite realizar operaciones como ingresar saldo inicial, comprar productos,
+ * y generar la factura al finalizar las compras.
+ */
 package com.aluracursos.comprastarjeta.menu;
 
 import com.aluracursos.comprastarjeta.modelos.Producto;
@@ -12,10 +17,21 @@ public class Menu {
 
     Scanner input = new Scanner(System.in);
 
+    /**
+     * Valida que un valor ingresado sea mayor a cero.
+     *
+     * @param valor Valor a validar.
+     * @return true si el valor no es válido, false en caso contrario.
+     */
     public boolean validacionIngresoValor(double valor) {
         return !(valor > 0);
     }
 
+    /**
+     * Presenta el menú inicial para ingresar el saldo de la tarjeta.
+     *
+     * @return Saldo inicial ingresado.
+     */
     public double presentarIngresoSaldoIncial() {
         do {
             try {
@@ -38,6 +54,12 @@ public class Menu {
         } while (true);
     }
 
+    /**
+     * Muestra el menú principal y permite elegir una opción.
+     *
+     * @param tarjeta Tarjeta con el saldo actual.
+     * @return Opcion elegida por el usuario.
+     */
     public int mostrarMenu(Tarjeta tarjeta) {
         int opcionElegida;
         do {
@@ -64,6 +86,11 @@ public class Menu {
         } while (true);
     }
 
+    /**
+     * Permite al usuario ingresar la descripción de un producto.
+     *
+     * @return Descripción del producto ingresada por el usuario.
+     */
     public String ingresarDescripcionProducto() {
         do {
             System.out.println("Ingrese la Descipcion del producto a Comprar");
@@ -76,6 +103,12 @@ public class Menu {
         } while (true);
     }
 
+    /**
+     * Permite al usuario ingresar el valor de un producto.
+     *
+     * @param descripcionProducto Descripción del producto para referencia.
+     * @return Valor del producto ingresado por el usuario.
+     */
     public double ingresarValorProducto(String descripcionProducto) {
         do {
             try {
@@ -95,6 +128,12 @@ public class Menu {
         } while (true);
     }
 
+    /**
+     * Genera y muestra la factura con los productos comprados y el saldo restante.
+     *
+     * @param listaDeProductos Lista de productos comprados.
+     * @param tarjeta Tarjeta con el saldo restante.
+     */
     public void generarFactura(List<Producto> listaDeProductos, Tarjeta tarjeta) {
         Collections.sort(listaDeProductos);
         System.out.println("************* Factura *************");
@@ -108,12 +147,13 @@ public class Menu {
 
     }
 
+    /**
+     * Limpia el buffer del Scanner para evitar errores de entrada.
+     */
     public void limpiarBufferScanner() {
-        if (input.hasNextLine()) { // Asegúrate de que hay algo en el búfer
-            input.nextLine();      // Consume el token inválido
+        if (input.hasNextLine()) {
+            input.nextLine();
         }
     }
-
-
 }
 
