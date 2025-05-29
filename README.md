@@ -5,7 +5,6 @@ Este proyecto simula un sistema de compras en línea en el que un usuario puede 
 ## Tabla de Contenidos
 
 - [Descripción](#descripción)
-- [Instalación](#instalación)
 - [Uso](#uso)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
@@ -25,30 +24,6 @@ El sistema incluye tres paquetes principales:
 - **`menu`**: Contiene las funciones relacionadas con la interacción del usuario (mostrar menús, ingresar datos).
 - **`modelos`**: Contiene las clases principales para representar objetos como `Producto` y `Tarjeta`.
 - **`principal`**: Contiene la clase principal que ejecuta el flujo del programa.
-
-## Instalación
-
-Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
-
-1. **Clonar el repositorio**:
-
-   ```bash
-   git clone https://github.com/tu-usuario/Desafio-ComprasCajero.git
-   cd Desafio-ComprasCajero
-   ```
-
-2. **Compilar y ejecutar el proyecto**:
-
-   Asegúrate de tener instalada una versión reciente de [Java](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html).
-
-   Para compilar y ejecutar el proyecto, usa los siguientes comandos desde la terminal:
-
-   ```bash
-   javac -d bin src/com/aluracursos/comprastarjeta/principal/Main.java
-   java -cp bin com.aluracursos.comprastarjeta.principal.Main
-   ```
-
-   También puedes usar tu IDE favorito (IntelliJ IDEA, Eclipse, etc.) para compilar y ejecutar el proyecto de manera más sencilla.
 
 ## Uso
 
